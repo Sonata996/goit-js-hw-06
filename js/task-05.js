@@ -1,12 +1,15 @@
-const form = document.getElementById('name-input')
-const nameOutput = document.getElementById('name-output')
+const form = document.querySelector('#name-input')
+const nameOutput = document.querySelector('#name-output')
 
 // const onResultInput = () => {
 //     nameOutput.textContent = form
 // }
 console.dir(form)
-const onResultInputValue = (event) =>{
-    nameOutput.textContent = form.value
+const onResultInputValue = (event) => {
+    if (form.value === '') {
+        return nameOutput.textContent ='Anonymous'
+    }
+   return nameOutput.textContent = form.value
 }
 
 form.addEventListener('input', onResultInputValue)
