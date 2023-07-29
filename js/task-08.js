@@ -10,13 +10,13 @@ function onFormInputs(event) {
     if (email.value === '' || password.value === '') {
       return  alert('Всі поля повинні бути заповнені.')
     } else {
-        const registeredUsers = [
-            {
+        const registeredUsers = {
                 email: email.value,
                 password: email.value
             }
-        ]
+        
         console.log(registeredUsers)
     }
+    
     event.currentTarget.reset()
 }
