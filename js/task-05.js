@@ -1,11 +1,9 @@
 const form = document.querySelector('#name-input')
 const nameOutput = document.querySelector('#name-output')
 
-// const onResultInput = () => {
-//     nameOutput.textContent = form
-// }
+
 console.dir(form)
-const onResultInputValue = (event) => {
+const onResultInputValue = () => {
     if (form.value === '') {
         return nameOutput.textContent ='Anonymous'
     }
